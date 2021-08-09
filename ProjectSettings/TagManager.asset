@@ -10,6 +10,7 @@ TagManager:
   - Leader2
   - Leader3
   - Leader4
+  - Dummy
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Hitbox
+  - Enemy
+  - Ground
   - 
   - 
   - 
