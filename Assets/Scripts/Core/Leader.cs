@@ -26,4 +26,14 @@ public class Leader : MonoBehaviour
 	{
 		dummies.Remove(dum);
 	}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Leader"))
+        {
+			if(this.dummies.Count == 0)
+            {
+				Destroy(this.gameObject);
+            }
+        }
+    }
 }
