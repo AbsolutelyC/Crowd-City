@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1976,7 +1976,6 @@ GameObject:
   - component: {fileID: 3854514902300375869}
   - component: {fileID: 3854514902300375843}
   - component: {fileID: 3854514902300375867}
-  - component: {fileID: 3854514902300375871}
   - component: {fileID: 3854514902300375872}
   m_Layer: 8
   m_Name: Leader
@@ -2069,19 +2068,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3854514902300375871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3854514902300375866}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caee2365fb7c03a4380ee2df8647737c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 9c3ec48dfef2ed7469f063ef9eca4dbd, type: 2}
 --- !u!114 &3854514902300375872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,9 +2096,8 @@ GameObject:
   - component: {fileID: 6703038023562728837}
   - component: {fileID: 6703038023562728836}
   - component: {fileID: 1370771619}
-  - component: {fileID: 1370771612}
   - component: {fileID: 6703038023562728838}
-  - component: {fileID: 6703038023562728840}
+  - component: {fileID: 1370771612}
   - component: {fileID: 6703038023562728841}
   m_Layer: 0
   m_Name: Player
@@ -2151,19 +2136,28 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6703038023562728838
-MonoBehaviour:
+--- !u!195 &6703038023562728838
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6703038023562728835}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: caee2365fb7c03a4380ee2df8647737c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 3ee381bc56933c54f81fa0893fa5bb03, type: 2}
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 15
+  m_Acceleration: 20
+  avoidancePriority: 50
+  m_AngularSpeed: 200
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!23 &6703038023562728839
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2205,19 +2199,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &6703038023562728840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6703038023562728835}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 892d2be98358c2546814794c378d46d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerFollow: []
 --- !u!114 &6703038023562728841
 MonoBehaviour:
   m_ObjectHideFlags: 0
