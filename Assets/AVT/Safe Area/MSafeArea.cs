@@ -103,7 +103,7 @@ public class MSafeArea : MonoBehaviour
     [SerializeField] bool ConformY = true;  // Conform to screen safe area on Y-axis (default true, disable to ignore)
     [SerializeField] bool Logging = false;  // Conform to screen safe area on Y-axis (default true, disable to ignore)
 
-    void Awake()
+    void Start()
     {
         Panel = GetComponent<RectTransform>();
 
