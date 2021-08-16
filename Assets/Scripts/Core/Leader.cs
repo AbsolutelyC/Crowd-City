@@ -6,6 +6,7 @@ public class Leader : MonoBehaviour
 {
 	public Renderer rend;
 	public List<Dummy> dummies = new List<Dummy>();
+	
 
 	private Material mat;
 
@@ -17,7 +18,10 @@ public class Leader : MonoBehaviour
 	public void AddDummy(Dummy dum)
 	{
 		dum.leader = this;
-		dum.rend.sharedMaterial = mat;
+		//dum.animator.SetBool("isFollowing", true);
+        dum.rend.sharedMaterial = mat;
+		dum.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>().material = mat;
+		dum.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>().material = mat;
 
 		dummies.Add(dum);
 	}

@@ -9,6 +9,8 @@ public class Dummy : MonoBehaviour
 	public Leader leader = null;
 	public NavMeshAgent agent;
 
+	//public Animator animator;
+
 	private void Update()
 	{
 		if (leader != null)
