@@ -13,6 +13,9 @@ public class JoystickPlayerExample : MonoBehaviour
 
     private void Awake()
     {
+        variableJoystick.SnapX = true;
+        variableJoystick.SnapY = true;
+        
         variableJoystick.SetMode(JoystickType.Floating);
         animator = GetComponent<Animator>();
     }
@@ -21,6 +24,7 @@ public class JoystickPlayerExample : MonoBehaviour
     {
 
         direction = Vector3.forward * variableJoystick.Vertical + Vector3.right * variableJoystick.Horizontal;
+        direction.Normalize();
         transform.position += direction * speed * Time.deltaTime;
         Quaternion rotation = Quaternion.LookRotation(direction);
         transform.rotation = rotation;
